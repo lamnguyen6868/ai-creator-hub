@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Creator | AI Creator Hub</title>
+    <meta
+        name="description"
+        content="AI Video Creator - Tạo nội dung video bằng AI"
+    >
+</head>
+
+<body>
+
+    <header>
+        <a href="../index.html">← AI Creator Hub</a>
+
+        <h1>🎬 Video Creator</h1>
+        <p>Tạo kịch bản và prompt video bằng AI</p>
+    </header>
+
+    <main>
+
+        <form id="videoCreatorForm">
+
+            <div>
+                <label for="topic">Chủ đề</label>
+                <input
+                    type="text"
+                    id="topic"
+                    name="topic"
+                    placeholder="Ví dụ: Dạy con cách nói lời từ chối"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="audience">Đối tượng</label>
+                <input
+                    type="text"
+                    id="audience"
+                    name="audience"
+                    placeholder="Ví dụ: Phụ huynh có con 6-12 tuổi"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="painPoint">Nỗi đau / vấn đề</label>
+                <textarea
+                    id="painPoint"
+                    name="painPoint"
+                    placeholder="Người dùng đang gặp vấn đề gì?"
+                    required
+                ></textarea>
+            </div>
+
+            <div>
+                <label for="situation">Tình huống</label>
+                <textarea
+                    id="situation"
+                    name="situation"
+                    placeholder="Mô tả tình huống cụ thể..."
+                ></textarea>
+            </div>
+
+            <div>
+                <label for="format">Format</label>
+                <select id="format" name="format">
+                    <option value="reels">Facebook Reels</option>
