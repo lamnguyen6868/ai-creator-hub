@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Video Creator | AI Creator Hub</title>
+
     <meta
         name="description"
         content="AI Video Creator - Tạo nội dung video bằng AI"
@@ -18,6 +18,7 @@
         <a href="../index.html">← AI Creator Hub</a>
 
         <h1>🎬 Video Creator</h1>
+
         <p>Tạo kịch bản và prompt video bằng AI</p>
     </header>
 
@@ -27,6 +28,7 @@
 
             <div>
                 <label for="topic">Chủ đề</label>
+
                 <input
                     type="text"
                     id="topic"
@@ -36,8 +38,10 @@
                 >
             </div>
 
+
             <div>
                 <label for="audience">Đối tượng</label>
+
                 <input
                     type="text"
                     id="audience"
@@ -47,8 +51,10 @@
                 >
             </div>
 
+
             <div>
                 <label for="painPoint">Nỗi đau / vấn đề</label>
+
                 <textarea
                     id="painPoint"
                     name="painPoint"
@@ -57,8 +63,10 @@
                 ></textarea>
             </div>
 
+
             <div>
                 <label for="situation">Tình huống</label>
+
                 <textarea
                     id="situation"
                     name="situation"
@@ -66,7 +74,74 @@
                 ></textarea>
             </div>
 
+
             <div>
                 <label for="format">Format</label>
+
                 <select id="format" name="format">
                     <option value="reels">Facebook Reels</option>
+                    <option value="tiktok">TikTok</option>
+                    <option value="shorts">YouTube Shorts</option>
+                </select>
+            </div>
+
+
+            <div>
+                <label for="duration">Thời lượng</label>
+
+                <select id="duration" name="duration">
+                    <option value="15">15 giây</option>
+                    <option value="30" selected>30 giây</option>
+                    <option value="45">45 giây</option>
+                    <option value="60">60 giây</option>
+                </select>
+            </div>
+
+
+            <div>
+                <label for="scenes">Số cảnh</label>
+
+                <select id="scenes" name="scenes">
+                    <option value="3">3 cảnh</option>
+                    <option value="5" selected>5 cảnh</option>
+                    <option value="7">7 cảnh</option>
+                    <option value="10">10 cảnh</option>
+                </select>
+            </div>
+
+
+            <div>
+                <label for="style">Phong cách</label>
+
+                <select id="style" name="style">
+                    <option value="natural">Tự nhiên</option>
+                    <option value="educational">Giáo dục</option>
+                    <option value="storytelling">Kể chuyện</option>
+                    <option value="emotional">Cảm xúc</option>
+                    <option value="professional">Chuyên nghiệp</option>
+                </select>
+            </div>
+
+
+            <button type="submit">
+                ✨ Tạo nội dung
+            </button>
+
+        </form>
+
+
+        <section id="result" hidden>
+
+            <h2>Kết quả</h2>
+
+            <div id="resultContent"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/tools/video.js"></script>
+
+</body>
+</html>
