@@ -1,147 +1,32 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Video Creator | AI Creator Hub</title>
-
-    <meta
-        name="description"
-        content="AI Video Creator - Tạo nội dung video bằng AI"
-    >
-</head>
-
-<body>
-
-    <header>
-        <a href="../index.html">← AI Creator Hub</a>
-
-        <h1>🎬 Video Creator</h1>
-
-        <p>Tạo kịch bản và prompt video bằng AI</p>
-    </header>
-
-    <main>
-
-        <form id="videoCreatorForm">
-
-            <div>
-                <label for="topic">Chủ đề</label>
-
-                <input
-                    type="text"
-                    id="topic"
-                    name="topic"
-                    placeholder="Ví dụ: Dạy con cách nói lời từ chối"
-                    required
-                >
-            </div>
-
-
-            <div>
-                <label for="audience">Đối tượng</label>
-
-                <input
-                    type="text"
-                    id="audience"
-                    name="audience"
-                    placeholder="Ví dụ: Phụ huynh có con 6-12 tuổi"
-                    required
-                >
-            </div>
-
-
-            <div>
-                <label for="painPoint">Nỗi đau / vấn đề</label>
-
-                <textarea
-                    id="painPoint"
-                    name="painPoint"
-                    placeholder="Người dùng đang gặp vấn đề gì?"
-                    required
-                ></textarea>
-            </div>
-
-
-            <div>
-                <label for="situation">Tình huống</label>
-
-                <textarea
-                    id="situation"
-                    name="situation"
-                    placeholder="Mô tả tình huống cụ thể..."
-                ></textarea>
-            </div>
-
-
-            <div>
-                <label for="format">Format</label>
-
-                <select id="format" name="format">
-                    <option value="reels">Facebook Reels</option>
-                    <option value="tiktok">TikTok</option>
-                    <option value="shorts">YouTube Shorts</option>
-                </select>
-            </div>
-
-
-            <div>
-                <label for="duration">Thời lượng</label>
-
-                <select id="duration" name="duration">
-                    <option value="15">15 giây</option>
-                    <option value="30" selected>30 giây</option>
-                    <option value="45">45 giây</option>
-                    <option value="60">60 giây</option>
-                </select>
-            </div>
-
-
-            <div>
-                <label for="scenes">Số cảnh</label>
-
-                <select id="scenes" name="scenes">
-                    <option value="3">3 cảnh</option>
-                    <option value="5" selected>5 cảnh</option>
-                    <option value="7">7 cảnh</option>
-                    <option value="10">10 cảnh</option>
-                </select>
-            </div>
-
-
-            <div>
-                <label for="style">Phong cách</label>
-
-                <select id="style" name="style">
-                    <option value="natural">Tự nhiên</option>
-                    <option value="educational">Giáo dục</option>
-                    <option value="storytelling">Kể chuyện</option>
-                    <option value="emotional">Cảm xúc</option>
-                    <option value="professional">Chuyên nghiệp</option>
-                </select>
-            </div>
-
-
-            <button type="submit">
-                ✨ Tạo nội dung
-            </button>
-
-        </form>
-
-
-        <section id="result" hidden>
-
-            <h2>Kết quả</h2>
-
-            <div id="resultContent"></div>
-
-        </section>
-
-    </main>
-
-
-    <script src="../js/tools/video.js"></script>
-
-</body>
-</html>
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Creator Hub - Video Creator">
+<title>Video Creator | AI Creator Hub</title><link rel="stylesheet" href="../css/main.css">
+</head><body>
+<header class="site-header"><div class="container nav">
+<a class="brand" href="../index.html"><span class="brand-mark">✦</span><span><b>AI Creator</b><small>HUB</small></span></a>
+<a class="back-link" href="../index.html">← Tất cả công cụ</a></div></header>
+<main class="container tool-page">
+<section class="tool-hero"><div class="large-icon">🎬</div><div><span class="eyebrow">AI TOOL · VIDEO</span>
+<h1>Video Creator</h1><p>Điền brief để tạo kịch bản và prompt video. Hiện tại đang ở chế độ preview dữ liệu.</p></div></section>
+<div class="workspace"><section class="panel">
+<div class="panel-heading"><div><span class="step-label">01 · YOUR BRIEF</span><h2>Thông tin nội dung</h2></div><span class="required-note">* Bắt buộc</span></div>
+<form id="videoCreatorForm">
+<div class="field"><label for="topic">Chủ đề <span>*</span></label><input id="topic" name="topic" required placeholder="Ví dụ: Dạy con cách nói lời từ chối"></div>
+<div class="field"><label for="audience">Đối tượng <span>*</span></label><input id="audience" name="audience" required placeholder="Ví dụ: Phụ huynh có con 6–12 tuổi"></div>
+<div class="field"><label for="painPoint">Nỗi đau / vấn đề <span>*</span></label><textarea id="painPoint" name="painPoint" required placeholder="Người xem đang gặp vấn đề gì?"></textarea></div>
+<div class="field"><label for="situation">Tình huống</label><textarea id="situation" name="situation" placeholder="Mô tả tình huống cụ thể..."></textarea></div>
+<div class="field-grid">
+<div class="field"><label for="format">Format</label><select id="format" name="format"><option value="reels">Facebook Reels</option><option value="tiktok">TikTok</option><option value="shorts">YouTube Shorts</option></select></div>
+<div class="field"><label for="duration">Thời lượng</label><select id="duration" name="duration"><option value="15">15 giây</option><option value="30" selected>30 giây</option><option value="45">45 giây</option><option value="60">60 giây</option></select></div></div>
+<div class="field-grid">
+<div class="field"><label for="scenes">Số cảnh</label><select id="scenes" name="scenes"><option value="3">3 cảnh</option><option value="5" selected>5 cảnh</option><option value="7">7 cảnh</option><option value="10">10 cảnh</option></select></div>
+<div class="field"><label for="style">Phong cách</label><select id="style" name="style"><option value="natural">Tự nhiên</option><option value="educational">Giáo dục</option><option value="storytelling">Kể chuyện</option><option value="emotional">Cảm xúc</option><option value="professional">Chuyên nghiệp</option></select></div></div>
+<button class="primary-btn" type="submit">✦ &nbsp;Tạo nội dung</button>
+</form></section>
+<section class="panel result-panel" id="result" hidden><div class="panel-heading"><div><span class="step-label">02 · PREVIEW</span><h2>Dữ liệu gửi AI</h2></div></div>
+<div class="result-box"><div class="result-status"><i></i>Ready for Make + Gemini</div><pre id="resultContent"></pre></div></section>
+</div></main>
+<footer class="site-footer"><div class="container">AI Creator Hub · Video Creator</div></footer>
+<script src="../js/tools/video.js"></script></body></html>
